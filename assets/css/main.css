@@ -379,3 +379,8 @@ a.contact__email {
     border: 1px solid #BBBBBB;
     border-radius: 4px;
 }
+
+.form__message {
+    margin-top: 24px;
+    display: none;
+}
