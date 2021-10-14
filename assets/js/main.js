@@ -7,8 +7,7 @@ function submitForm(event) {
     // Отменяем стандартное поведение браузера с отправкой формы
     event.preventDefault();
 
-    // event.target — это HTML-элемент form
-    let formData = new FormData(event.target);
+
 
     // Собираем данные формы в объект
         var object = {};
