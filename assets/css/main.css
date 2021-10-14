@@ -106,7 +106,7 @@ ul {
 
 .hero {
     min-height: 640px;
-    background-image: url(assets/img/hero_background1.jpg);
+    background-image: url(../img/hero_background1.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -191,7 +191,7 @@ ul {
     border-radius: 24px;
     display: flex;
     position: relative;
-    background: url(assets/img/about_background.jpg);
+    background: url(../img/about_background.jpg);
     background-size: cover;
     background-repeat: no-repeat;
 }
