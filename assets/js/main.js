@@ -16,8 +16,9 @@ function submitForm(event) {
         formData.forEach(function(value, key){
             object[key] = value;
         });
+        
         var json = JSON.stringify(object);
-
+        json = json.replace(/"([^"]+)":/g, '$1: ');
     
         const url = "https://api-enterprise.agro.club/api/v1/forms/call-back";
         fetch(url, {
@@ -30,6 +31,7 @@ function submitForm(event) {
         ).then(
             html => console.log(html)
         );
+        console.log(json)
   
 
 }
