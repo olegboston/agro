@@ -1,0 +1,381 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+body, html {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    background: #ffffff;
+    font-family: Montserrat, -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 400;
+    color: #000;
+    font-size: 16px;
+    line-height: 1.4;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    scroll-behavior: smooth;
+}
+
+* {
+    box-sizing: border-box
+}
+
+:root {
+    --header-height: 64px;
+    --tablet-min-width: 1110px
+}
+
+@media (max-width: 490px) {
+    body {
+        font-size: 14px;
+        line-height: 20px
+    }
+    :root {
+        --header-height: 40px
+    }
+}
+
+button {
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.images {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.wrapper {
+    max-width: 1110px;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+header {
+    width: 100%;
+    padding: 12px 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+h1 {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: normal;
+}
+
+h2 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+}
+
+ul {
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+.section {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.btn {
+    font-size: 16px;
+    font-weight: 600;
+    padding: 16px 24px;
+    background: #037BFF;
+    border-radius: 12px;
+    color: #ffffff;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.center {
+    text-align: center;
+}
+
+.hero {
+    min-height: 640px;
+    background-image: url(/assets/img/hero_background\ 1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.wrapper--hero {
+    padding-top: 70px;
+}
+
+.hero__title {
+    margin-bottom: 40px;
+}
+
+.hero__subtitle {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 36px;
+    line-height: 32px;
+}
+
+/* benefits */
+
+.section-title--benifits {
+    margin-bottom: 100px;
+}
+
+.benefits-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 64px;
+    column-gap: 56px;
+}
+
+.benefits-element {
+    display: flex;
+    max-width: 440px;
+}
+
+.benefits-element__icon {
+    padding-top: 5px;
+    height: 32px;
+    width: 32px;
+    flex: 0 0 auto;
+}
+
+.benefits-element__text {
+    font-size: 16px;
+    font-weight: 600;
+    margin-left: 24px;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.align-items-center .benefits-element__icon {
+    padding-top: 0;
+}
+
+/* CTA */
+
+.cta {
+    margin-top: 50px;
+    padding: 32px 38px;
+    background: rgba(3, 123, 255, 0.08);
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cta__text {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+/* ABOUT */
+
+.about-container {
+    padding: 56px 64px;
+    background: #F1F8FF;
+    border-radius: 24px;
+    display: flex;
+    position: relative;
+    background: url(/assets/img/about_background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.title-about {
+    margin-bottom: 16px;
+}
+
+.about-content {
+    max-width: 560px;
+}
+
+.about__text {
+    margin-bottom: 46px;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.about__img {
+    position: absolute;
+    right: 0;
+    bottom: -43px;
+    max-width: 500px;
+}
+
+.who {
+    padding-bottom: 160px;
+}
+
+.title-who {
+    margin-bottom: 60px;
+}
+
+/* TEAM */
+
+.team {
+    background: #FAFAFA;
+    padding-bottom: 120px;
+}
+
+.team-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 15px;
+    column-gap: 15px;
+}
+
+.team-member {
+    background-color: #ffffff;
+    border-radius: 16px;
+    padding: 16px 24px;
+    text-decoration: none;
+    color: inherit;
+    min-height: 260px;
+}
+
+.section-title--team {
+    margin-bottom: 54px;
+}
+
+.section-title--team h2 {
+    font-size: 40px;
+}
+
+.person {
+    display: flex;
+    margin-bottom: 16px;
+}
+
+.person__photo {
+    height: 72px;
+    width: 72px;
+    margin-right: 16px;
+    flex: 0 0 auto;
+}
+
+.person__name {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.person__position {
+    font-weight: 500;
+    font-size: 14px;
+    color: #666666;
+    margin-bottom: 4px;
+}
+
+.member-wrapper__text {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+/* FOOTER */
+
+.footer {
+    background: #F5F5F5;
+    padding-bottom: 0;
+}
+
+.section-title--footer h2 {
+    font-size: 24px;
+    margin-block-start: 0;
+}
+
+.social-link {
+    margin-right: 24px;
+}
+
+.footer-container {
+    display: flex;
+}
+
+.footer-container__col {
+    width: 50%;
+}
+
+.contact {
+    margin-bottom: 24px;
+}
+
+.contact__name {
+    color: #999999;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.contact__content {
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.contact__content a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a.contact__email {
+    color: #037BFF;
+}
+
+.footer hr {
+    border: none;
+    color: #DDDDDD;
+    background-color: #DDDDDD;
+    height: 1px;
+}
+
+.wrapper-links {
+    padding: 40px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-links {
+    display: flex;
+    font-size: 14px;
+    color: #666666;
+}
+
+.copyright {
+    margin-right: 40px;
+}
+
+.footer-link {
+    color: inherit;
+    text-decoration: none;
+    margin-right: 24px;
+}
+
+.go a {
+    color: #666666;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+/* FORM */
+
+.form-control {
+    width: 100%;
+    height: 36px;
+    padding: 8px 10px;
+    margin-bottom: 16px;
+    border: 1px solid #BBBBBB;
+    border-radius: 4px;
+}

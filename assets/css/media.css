@@ -1,0 +1,123 @@
+@media (max-width: 1110px) {
+    .wrapper {
+        max-width: calc(100% - 96px);
+        padding-right: 0;
+        padding-left: 0;
+    }
+    .about-content {
+        max-width: 50%;
+    }
+    .about__img {
+        max-width: 450px;
+    }
+    .section {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+}
+
+@media (max-width: 980px) {
+    .hero {
+        background-position: 75% 50%;
+    }
+    .about__text {
+        font-size: 20px;
+    }
+    .about__img {
+        max-width: 50%;
+    }
+    .team-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .footer-container, .footer-links {
+        flex-direction: column;
+    }
+    .footer-container__col, .footer-links, .wrapper-links, .copyright {
+        margin-bottom: 24px;
+    }
+    .footer, .wrapper-links {
+        padding-bottom: 0;
+    }
+    .footer-container__col {
+        width: 100%;
+    }
+    .links-container {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 780px) {
+    .wrapper {
+        max-width: calc(100% - 48px);
+    }
+    .about-container {
+        flex-direction: column;
+        height: 640px;
+    }
+    .about-content {
+        max-width: 100%;
+    }
+    .about__img {
+        max-width: 65%;
+        position: absolute;
+    }
+}
+
+@media (max-width: 690px) {
+    .benefits-container {
+        grid-template-columns: repeat(1, 1fr);
+        row-gap: 45px;
+    }
+    .team-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .about-container {
+        padding: 36px 54px;
+        height: 580px;
+    }
+}
+
+@media (max-width: 520px) {
+    h1 {
+        font-size: 22px;
+    }
+    h2, .section-title--team h2, .section-title--footer h2 {
+        font-size: 20px;
+    }
+    .btn {
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 20px;
+    }
+    .hero__subtitle {
+        font-size: 16px;
+        line-height: auto;
+    }
+    .wrapper {
+        max-width: calc(100% - 32px);
+    }
+    .section-title--benifits {
+        margin-bottom: 50px;
+    }
+    .cta {
+        flex-direction: column;
+    }
+    .cta__text {
+        margin-bottom: 24px;
+    }
+    .about__text {
+        font-size: 17px;
+    }
+    .about-container {
+        height: 500px;
+        padding: 20px 36px;
+    }
+    .section {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+    .footer {
+        padding-bottom: 0;
+    }
+}
