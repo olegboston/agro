@@ -552,13 +552,13 @@
           <div class="popup__content">
             <a href="" class="close-popup">&times;</a>
             <div class="container">
-              <form>
+              <form name="contact" id="contact">
                 <div class="form-group row">
                   <div class="input__item">
                     <input
                       type="text"
                       class="form-control"
-                      name="name"
+                      name="full_name"
                       id="name"
                       placeholder="Name"
                       required
@@ -588,11 +588,21 @@
                     <input
                       type="text"
                       class="form-control"
-                      name="company"
+                      name="company_name"
                       id="company"
                       placeholder="Company"
                     />
                   </div>
+                  
+                    <input
+                      type="text"
+                      class="form-control"
+                      name="region"
+                      id="region"
+                      value="US"
+                      hidden
+                    />
+              
                 </div>
                 <div class="form-group row">
                   <label class="custom-control custom-checkbox">
@@ -602,6 +612,7 @@
                       id=""
                       value="checkedValue"
                       class="custom-control-input"
+                      required
                     />
                     <span class="custom-control-description"
                       >By clicking the "Submit" button, you agree to
@@ -632,5 +643,6 @@
       </div>
     </main>
     <script src="assets/js/popup.js"></script>
+    <script src="assets/js/main.js?v=1"></script>
   </body>
 </html>
