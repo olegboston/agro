@@ -1,39 +1,36 @@
+
+
 document.getElementById('contact').addEventListener('submit', submitForm);
 
 
 function submitForm(event) {
     // Отменяем стандартное поведение браузера с отправкой формы
     event.preventDefault();
-    
+
+    // event.target — это HTML-элемент form
     let formData = new FormData(event.target);
 
     // Собираем данные формы в объект
-    let obj = {};
-       formData.forEach(function(value, key){
-        obj[key] = value;
-    });
+        var object = {};
+        var formData = new FormData(document.forms.contact);
+
+        formData.forEach(function(value, key){
+            object[key] = value;
+        });
+        var json = JSON.stringify(object);
+
     
-    // Собираем запрос к серверу
-    let request = new Request(event.target.action, {
-        method: 'POST',
-        url: 'https://api-enterprise.agro.club/api/v1/forms/call-back',
-        body: JSON.stringify(obj),
-        headers: {
-            'Content-Type': 'application/json',
-        },
-    });
+        const url = "https://api-enterprise.agro.club/api/v1/forms/call-back";
+        fetch(url, {
+            method : "POST",
+            body: json,
+
+        }).then(
+            response => response.text() // .json(), etc.
+            // same as function(response) {return response.text();}
+        ).then(
+            html => console.log(html)
+        );
   
-    
-    // Отправляем
-    fetch(request).then(
-        function(response) {
-            // Запрос успешно выполнен
-            console.log(response);
-        },
-        function(error) {
-            // Запрос не получилось отправить
-            console.error(error);
-        }
-    );
 
 }
